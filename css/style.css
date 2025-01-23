@@ -11,6 +11,8 @@ html{
 
 body{
     background-color: #fff;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 header{
@@ -55,4 +57,12 @@ span{
 img{
     height: 90px;
     display: block;
+}
+
+label{
+    width: 100%;
+}
+
+input{
+    width: 100%;
 }

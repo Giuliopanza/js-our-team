@@ -1,3 +1,10 @@
+/*Dato un array di oggetti rappresentante un team di un’azienda, 
+creare una pagina dedicata in cui mostrare una card per ciascun componente.
+(trovate l’array del team all’interno della cartella in allegato)
+Bonus
+Rendere l’esercizio responsive, mandando a capo le card
+Aggiungere un form di agginta membri che permetta di visualizzare il nuovo membro sulla pagina*/
+
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -39,6 +46,8 @@ const teamMembers = [
 
 const container = document.querySelector(".flex")
 
+function newmember() {
+  
 for (let i = 0; i < teamMembers.length; i++) {
 
   const element = teamMembers[i];
@@ -55,3 +64,35 @@ for (let i = 0; i < teamMembers.length; i++) {
             </div>`
   
 }
+
+}
+
+newmember ()
+
+const btn = document.getElementById('btn')
+
+btn.addEventListener('click',function (event) {
+
+  event.preventDefault()
+
+  const name = document.getElementById('name').value
+
+  const role = document.getElementById('role').value
+
+  const email = document.getElementById('email').value
+  
+  const img = document.getElementById('image').value
+
+  teamMembers.push ({
+    name,
+    role,
+    email,
+    img
+  }
+  )
+
+  container.innerHTML = ''
+
+  newmember()
+  
+})
